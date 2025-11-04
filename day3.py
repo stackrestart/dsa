@@ -87,7 +87,7 @@ len_arr = len(arr)
 triplet_sum = 0
 for i in range(len_arr - 2):
     for j in range(i + 1, len_arr - 1):
-        for k in range(i + 2, len_arr):
+        for k in range(j + 1, len_arr):
             triplet_sum = arr[i] + arr[j] + arr[k]
             print(triplet_sum, end = " ")
     print()
@@ -179,6 +179,7 @@ for i in range(n):
         print(arr[i], count)
 
 
+
 # 2D arrays
 arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 row = len(arr)
@@ -241,4 +242,3 @@ for i in range(row):
     for j in range(col):
         print(arr[i][j], end=" ")
     print()
-
