@@ -38,3 +38,26 @@ def chocolateFeast(n, c, m):
         count_c += 1
     return count_c
     
+# https://www.hackerrank.com/challenges/insertionsort1/problem?h_r=profile
+def insertionSort1(n, arr):
+    sort_element = arr[-1]
+    for i in range(len(arr)-1, -1, -1):
+        if i != 0 and arr[i - 1] > sort_element:
+            arr[i] = arr[i - 1]
+            print(*arr)
+        if arr[i - 1] < sort_element:
+            arr[i] = sort_element
+            print(*arr)
+            break
+        if i == 0:
+            arr[i] = sort_element
+            print(*arr)
+            break
+
+# https://www.hackerrank.com/challenges/strange-code/problem?h_r=profile
+def strangeCounter(t):
+    rem = 3
+    while t > rem:
+        t -= rem
+        rem = rem*2
+    return rem - t + 1
