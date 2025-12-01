@@ -25,3 +25,16 @@ def closestNumbers(arr):
             res.append(arr_srt[k + 1])
  
     return res
+
+# https://www.hackerrank.com/challenges/runningtime/problem?h_r=profile
+def runningTime(arr):
+    # Write your code here
+    count=0
+    for i in range(len(arr)-1):
+        j=i
+        while arr[j]>arr[j+1]and j>=0:
+            count+=1
+            arr[j+1],arr[j]=arr[j],arr[j+1]
+            j-=1
+ 
+    return count
